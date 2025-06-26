@@ -1,0 +1,94 @@
+/* Estilos personalizados para complementar o Tailwind */
+body {
+    font-family: 'Inter', sans-serif;
+/* ADICIONA A IMAGEM DE FUNDO AQUI */
+    /* Substitua 'URL_DA_IMAGEM_AQUI' pelo link da sua imagem */
+    background-image: url('IMG/Imagem\ de\ fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+/* Bloco NOVO para colar no lugar */
+
+.card-redesign {
+    /* Remove a borda padrão e adiciona uma borda superior grossa */
+    border: none;
+    border-top-width: 4px;
+    border-top-style: solid;
+    /* Efeito de transição suave */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-redesign:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Cores da borda e dos ícones */
+.border-aluno { border-color: #dc2626; } /* Vermelho */
+.icon-aluno { color: #dc2626; }
+
+.border-professor { border-color: #002e5f; } /* Azul Escuro */
+.icon-professor { color: #002e5f; }
+
+.border-lex { border-color: #00b9b6; } /* Verde Água */
+.icon-lex { color: #00b9b6; }
+
+/* EFEITO DE PREENCHIMENTO DE COR */
+/* Bloco NOVO para colar no lugar */
+/* EFEITO DE PREENCHIMENTO DE COR */
+.icon-wrapper {
+    border-radius: 0; /* Garante que o fundo seja um círculo */
+    transition: background-color 0.3s ease;
+}
+
+.icon-wrapper svg, 
+.icon-wrapper img {
+    transition: color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-redesign:hover .icon-aluno {
+    background-color: #dc2626; /* Preenche o círculo com a cor do portal */
+}
+.card-redesign:hover .icon-aluno svg {
+    color: white; /* Ícone fica branco */
+    transform: scale(1.1);
+}
+
+.card-redesign:hover .icon-professor {
+    background-color: #002e5f; /* Preenche o círculo com a cor do portal */
+}
+.card-redesign:hover .icon-professor svg {
+    color: white; /* Ícone fica branco */
+    transform: scale(1.1);
+}
+
+/* Correção para o ícone LEX */
+.card-redesign:hover .icon-lex-container {
+    background-color: #00b9b6; /* Preenche o círculo com a cor do portal */
+}
+.icon-lex-container {
+    position: relative; /* Permite empilhar as imagens */
+}
+.icon-lex-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.icon-lex-container .icon-hover {
+    opacity: 0;
+}
+.card-redesign:hover .icon-lex-container .icon-default {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+.card-redesign:hover .icon-lex-container .icon-hover {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
