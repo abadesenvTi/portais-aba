@@ -14,91 +14,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<!-- AQUI: Classes adicionadas para criar o layout flexível -->
 
-<body class="bg-gray-100 flex flex-col min-h-screen">
-
-    <main>
-        <div class="text-center p-4">
-
-            <img src="IMG/Logos aba.png" alt="Logo ABA e MapleBear" class="w-128 h-72 mx-auto mb-4">
-
-            <!-- AQUI: A classe 'flex-grow' foi adicionada -->
-            <div class="flex items-start justify-center py-12 flex-grow">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-
-                    <!-- Bloco Corrigido para o Portal do Aluno -->
-                    <div id="aluno-portal"
-                        class="bg-white rounded-xl shadow-lg cursor-pointer card-redesign border-aluno">
-                        <div class="p-8 text-center">
-                            <!-- A classe 'icon-wrapper' foi adicionada aqui -->
-                            <div
-                                class="icon-wrapper icon-aluno w-12 h-12 mx-auto mb-4 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                </svg>
-                            </div>
-                            <h2 class="text-2xl font-bold text-gray-800">Portal do Aluno</h2>
-                            <!-- O estilo do botão também foi corrigido -->
-                            <button
-                                class="mt-6 w-full font-bold py-3 px-6 rounded-lg bg-red-600 text-white hover:bg-red-700 transition-colors">
-                                Acessar
-                            </button>
+<body class="bg-gray-100 flex flex-col min-h-screen justify-between">
+    <main class="text-center p-4 flex flex-col">
+        <img src="IMG/Logos aba.png" alt="Logo ABA e MapleBear" class="w-128 h-72 mx-auto mb-4">
+        <div class="flex items-start justify-center py-12 flex-grow">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div id="aluno-portal" class="bg-white rounded-xl shadow-lg cursor-pointer card-redesign border-aluno">
+                    <div class="p-8 text-center">
+                        <div class="icon-wrapper icon-aluno w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                            </svg>
                         </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Portal do Aluno</h2>
+                        <button
+                            class="mt-6 w-full font-bold py-3 px-6 rounded-lg bg-red-600 text-white hover:bg-red-700 transition-colors">
+                            Acessar
+                        </button>
                     </div>
+                </div>
 
-                    <div id="professor-portal"
-                        class="bg-white rounded-xl shadow-lg cursor-pointer card-redesign border-professor">
-                        <div class="p-8 text-center">
-                            <div class="icon-professor w-12 h-12 mx-auto mb-4 flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                </svg>
-                            </div>
-                            <h2 class="text-2xl font-bold text-gray-800">Portal do Professor</h2>
-                            <button class="mt-6 w-full text-white font-bold py-3 px-6 rounded-lg transition-colors"
-                                style="background-color: #002e5f;" onmouseover="this.style.backgroundColor='#00254c'"
-                                onmouseout="this.style.backgroundColor='#002e5f'">
-                                Acessar
-                            </button>
+                <div id="professor-portal"
+                    class="bg-white rounded-xl shadow-lg cursor-pointer card-redesign border-professor">
+                    <div class="p-8 text-center">
+                        <div class="icon-professor w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                            </svg>
                         </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Portal do Professor</h2>
+                        <button class="mt-6 w-full text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                            style="background-color: #002e5f;" onmouseover="this.style.backgroundColor='#00254c'"
+                            onmouseout="this.style.backgroundColor='#002e5f'">
+                            Acessar
+                        </button>
                     </div>
+                </div>
 
-                    <!-- Bloco NOVO para colar no lugar -->
-                    <div id="lex-portal" class="bg-white rounded-xl shadow-lg cursor-pointer card-redesign border-lex">
-                        <div class="p-8 text-center">
-                            <!-- Ícone -->
-                            <div class="icon-wrapper icon-lex-container w-12 h-12 mx-auto mb-4">
-                                <!-- As duas imagens são empilhadas aqui -->
-                                <img src="IMG/Lex.png" alt="Ícone LEX" class="h-10 w-10 icon-default">
-                                <img src="IMG/Lex 2.png" alt="Ícone LEX Hover" class="h-10 w-10 icon-hover">
-                            </div>
-                            <h2 class="text-2xl font-bold text-gray-800">Portal LEX</h2>
-                            <button class="mt-6 w-full text-white font-bold py-3 px-6 rounded-lg transition-colors"
-                                style="background-color: #00b9b6;" onmouseover="this.style.backgroundColor='#00b9b6'"
-                                onmouseout="this.style.backgroundColor='#00b9b6'">
-                                Acessar
-                            </button>
+                <div id="lex-portal" class="bg-white rounded-xl shadow-lg cursor-pointer card-redesign border-lex">
+                    <div class="p-8 text-center">
+                        <!-- Ícone -->
+                        <div class="icon-wrapper icon-lex-container w-12 h-12 mx-auto mb-4">
+                            <!-- As duas imagens são empilhadas aqui -->
+                            <img src="IMG/Lex.png" alt="Ícone LEX" class="h-10 w-10 icon-default">
+                            <img src="IMG/Lex 2.png" alt="Ícone LEX Hover" class="h-10 w-10 icon-hover">
                         </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Portal LEX</h2>
+                        <button class="mt-6 w-full text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                            style="background-color: #00b9b6;" onmouseover="this.style.backgroundColor='#00b9b6'"
+                            onmouseout="this.style.backgroundColor='#00b9b6'">
+                            Acessar
+                        </button>
                     </div>
                 </div>
             </div>
-
-            <script src="script.js"></script>
-
-            <!-- RODAPÉ -->
-            <footer class="w-full text-center p-4 bg-gray-200 mt-auto">
-                <p class="text-sm text-gray-600">© 2025 ABA Global Education. Todos os direitos reservados.</p>
-            </footer>
         </div>
+
+    </main>
 </body>
+
+<footer class="w-full text-center p-4 bg-gray-200">
+    <p class="text-sm text-gray-600">© 2025 ABA Global Education. Todos os direitos reservados.</p>
+</footer>
 
 </html>
