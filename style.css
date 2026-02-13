@@ -34,8 +34,12 @@ body {
 .border-professor { border-color: #002e5f; } /* Azul Escuro */
 .icon-professor { color: #002e5f; }
 
-.border-lex { border-color: #00b9b6; } /* Verde Água */
+.border-lex { border-color: #00b9b6; } /* Verde Água / LEX */
 .icon-lex { color: #00b9b6; }
+
+/* Último portal – mude a cor aqui para não afetar o LEX */
+.border-novo { border-color: #ff5d66; } /* Ex.: coral – altere o valor */
+.icon-novo { color: #ff5d66; }
 
 /* EFEITO DE PREENCHIMENTO DE COR */
 /* Bloco NOVO para colar no lugar */
@@ -90,5 +94,10 @@ body {
 .card-redesign:hover .icon-lex-container .icon-hover {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Hover do ícone no último portal (borda nova) */
+.card-redesign.border-novo:hover .icon-lex-container {
+    background-color: #ff5d66;
 }
 
