@@ -43,8 +43,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Adiciona o evento de clique para o Portal LEX
     document.getElementById('lex-portal').addEventListener('click', function() {
-        showCustomAlert('Redirecionando para o Portal LEX...');
+        showCustomAlert('Redirecionando para o Portal Lex...');
         // IMPORTANTE: Substitua '#' pelo link real do portal LEX
          window.location.href = 'https://sso.lex.education/login';
+    });
+
+    // Adiciona o evento de clique para o Portal TODDLE
+    document.getElementById('Toddle-portal').addEventListener('click', function() {
+        showCustomAlert('Redirecionando para o Portal Toddle...');
+        // IMPORTANTE: Substitua '#' pelo link real do portal TODDLE
+         window.location.href = 'https://web.toddleapp.com/?type=loginHome';
     });
 });
